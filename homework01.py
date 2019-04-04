@@ -88,7 +88,7 @@ def flatten(seq):
     lst = list()
 
     for x in seq:
-        if type(x).__name__ == "list" or type(x).__name__ == "tuple":
+        if type(x) == list or type(x) == tuple:
             lst += flatten(x)
         else:
             lst.append(x)
